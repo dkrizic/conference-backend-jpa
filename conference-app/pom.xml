@@ -10,7 +10,7 @@
 	<packaging>ear</packaging>
 
 	<build>
-		<finalName>conference.ear</finalName>
+		<finalName>conference</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
