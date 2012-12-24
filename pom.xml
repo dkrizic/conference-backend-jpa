@@ -4,7 +4,7 @@
   <artifactId>conference</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>${project.artfactId}</name>
+  <name>${project.artifactId}</name>
   <modules>
   	<module>conference-client</module>
   	<module>conference-service</module>
