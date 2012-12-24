@@ -9,7 +9,27 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<javaee6.web.spec.version>2.0.0.Final</javaee6.web.spec.version>
+		<resteasy.version>2.3.4.Final</resteasy.version>
 	</properties>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>2.3.2</version>
+					<configuration>
+						<source>1.6</source>
+						<target>1.6</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -19,9 +39,6 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-			<!-- JSR-303 (Bean Validation) Implementation -->
-			<!-- Provides portable constraints such as @Email -->
-			<!-- Hibernate Validator is shipped in JBoss AS 7 -->
 			<dependency>
 				<groupId>org.hibernate</groupId>
 				<artifactId>hibernate-validator</artifactId>
@@ -33,6 +50,18 @@
 						<artifactId>slf4j-api</artifactId>
 					</exclusion>
 				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-jaxrs</artifactId>
+				<version>${resteasy.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-jackson-provider</artifactId>
+				<version>${resteasy.version}</version>
+				<scope>test</scope>
 			</dependency>
 
 			<!-- Test dependencies -->
