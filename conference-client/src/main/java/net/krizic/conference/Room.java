@@ -3,7 +3,9 @@ package net.krizic.conference;
 import java.io.Serializable;
 import java.util.UUID;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -23,6 +25,7 @@ public class Room implements Serializable {
 		this.name = name;
 	}
 
+	@Id
 	public String getId() {
 		return id;
 	}
@@ -31,6 +34,7 @@ public class Room implements Serializable {
 		this.id = id;
 	}
 
+	@Column(nullable = false)
 	public String getName() {
 		return name;
 	}

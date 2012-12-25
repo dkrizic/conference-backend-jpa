@@ -14,22 +14,23 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Local
-@Path("/room")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public interface RoomService {
 
 	@GET
+	@Path("/")
 	List<Room> readAllRooms();
 
 	@POST
-	void addRoom(Room r);
+	@Path("/")
+	Room addRoom(Room r);
 
 	@PUT
-	@Path("{rid}")
+	@Path("/{rid}")
 	void updateRoom(@PathParam("rid") String rid, Room r);
 
 	@DELETE
-	@Path("{rid}")
+	@Path("/{rid}")
 	void deleteRoom(String rid);
 }

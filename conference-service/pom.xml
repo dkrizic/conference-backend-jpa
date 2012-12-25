@@ -19,6 +19,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>${project.artifactId}</finalName>
 	</build>
 	<dependencies>
 		<dependency>
@@ -67,6 +68,10 @@
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.2</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxrs</artifactId>
 		</dependency>
 	</dependencies>
 </project>

@@ -18,9 +18,9 @@
 				<version>2.6</version>
 				<configuration>
 					<version>6</version>
-					<defaultLibBundleDir>lib</defaultLibBundleDir>
-					<modules>
-					</modules>
+					<includeLibInApplicationXml>true</includeLibInApplicationXml>
+					<finalName>conference</finalName>
+					<fileNameMapping>no-version</fileNameMapping>
 				</configuration>
 			</plugin>
 		</plugins>
